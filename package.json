@@ -1,0 +1,12 @@
+{
+  "name": "marvel-character-vault",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static frontend for browsing Marvel characters from Supabase.",
+  "scripts": {
+    "dev": "sh -c 'python3 -m http.server \"${PORT:-8000}\"'",
+    "start": "sh -c 'python3 -m http.server \"${PORT:-8000}\"'",
+    "build": "echo \"Static site: no build step is required.\"",
+    "preview": "sh -c 'python3 -m http.server \"${PORT:-8000}\"'"
+  }
+}

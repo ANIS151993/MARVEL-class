@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Character Vault</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260420-2014" />
+  </head>
+  <body>
+    <div class="bg-particles">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="auth-shell" id="auth-shell">
+      <div class="auth-card">
+        <div class="auth-copy">
+          <p class="auth-eyebrow">Secure Access</p>
+          <h2 class="auth-title">Enter The Marvel Vault</h2>
+          <p class="auth-description">
+            Create an account or sign in with your email to browse the character database.
+          </p>
+        </div>
+
+        <div class="auth-toggle" role="tablist" aria-label="Authentication mode">
+          <button id="signin-tab" class="auth-tab active" type="button" aria-pressed="true">
+            Sign In
+          </button>
+          <button id="signup-tab" class="auth-tab" type="button" aria-pressed="false">
+            Sign Up
+          </button>
+        </div>
+
+        <form id="auth-form" class="auth-form">
+          <label class="auth-label" for="auth-email">Email</label>
+          <input
+            id="auth-email"
+            class="auth-input"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+
+          <label class="auth-label" for="auth-password">Password</label>
+          <input
+            id="auth-password"
+            class="auth-input"
+            type="password"
+            placeholder="At least 6 characters"
+            autocomplete="current-password"
+            minlength="6"
+            required
+          />
+
+          <p id="auth-helper" class="auth-helper">
+            Sign in with the email and password from your Supabase account.
+          </p>
+
+          <button id="auth-submit" class="auth-submit" type="submit">Unlock Access</button>
+        </form>
+
+        <div id="auth-message" class="auth-message hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <main class="container">
+      <header class="header">
+        <div class="header-top">
+          <div>
+            <div class="brand-badge">MARVEL</div>
+            <h1 class="app-title">UNIVERSE API</h1>
+            <p class="app-subtitle">PRIVATE ACCESS FOR AUTHENTICATED USERS</p>
+          </div>
+
+          <div id="account-panel" class="account-panel hidden">
+            <div class="account-meta">
+              <span class="account-label">Signed in as</span>
+              <span id="account-email" class="account-email"></span>
+            </div>
+            <button id="signout-button" class="account-button" type="button">Sign Out</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="search-wrapper">
+        <div class="input-container">
+          <span class="search-icon">&#9906;</span>
+          <input
+            id="input-box"
+            class="input"
+            type="text"
+            placeholder="Search Marvel character by name or Marvel ID"
+            autocomplete="off"
+          />
+          <button id="submit-button" class="button" type="button">
+            <span class="btn-text">Search</span>
+            <span class="btn-arrow">&#8594;</span>
+          </button>
+        </div>
+        <div class="list" id="autocomplete-list"></div>
+        <div class="search-divider"></div>
+      </section>
+
+      <div id="status-banner" class="status-banner hidden"></div>
+      <section class="display-container" id="show-container"></section>
+
+      <footer class="copyright">
+        <div class="copyright-divider"></div>
+        <p class="copyright-name">Md Anisur Rahaman Chowdhury</p>
+        <p class="copyright-detail">chowdhur014@gannon.edu</p>
+        <p class="copyright-detail">Gannon University</p>
+        <p class="copyright-year">&copy; 2026 All Rights Reserved</p>
+      </footer>
+    </main>
+
+    <script src="./config.js?v=20260420-2014"></script>
+    <script type="module" src="./app.js?v=20260420-2014"></script>
+  </body>
+</html>
